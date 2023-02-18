@@ -8,7 +8,6 @@
     --primary-color:#23606E;
     --secondary-color: #023535;
     --font-oswald: 'Oswald', sans-serif;
-    font-size:1rem;
 }
 
 *{
@@ -20,7 +19,7 @@
 body{
     font-family: var(--font-oswald);
     background: var(--background-color);
-    
+    font-size: 1em;
 }
 
 main{
@@ -56,8 +55,8 @@ button{
     border-radius: 3px;
     color: var(--white-color);
     border: 0;
-    padding: 1rem;
-    margin-top: 2.5rem;
+    padding: 1em;
+    margin-top: 2.5em;
     background-color: var(--primary-color);
     font-size: 1.2rem;
 }
