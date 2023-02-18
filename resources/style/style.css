@@ -94,7 +94,7 @@ section.experience-container > div  p {
 }
 
 :is(.experience-container,.portfolio-container) :where(img){
-    width: -webkit-fill-available;
+    width: -webkit-fill-available; /* limited support */
 }
 
 .portfolio-container > div{
@@ -152,7 +152,7 @@ footer {
 }
 
 /* Desktop */
-@media screen and (min-width: 786px){
+@media screen and (min-width: 992px){
     main{
         width: 1200px;
         margin:0 auto;
