@@ -91,6 +91,10 @@ section.experience-container > div  p {
     margin:10px;
 }
 
+.social-media > a:first-child{
+    padding-left:0;
+}
+
 section.contact-container{
     background:var(--primary-color);
 }
