@@ -8,6 +8,7 @@
     --primary-color:#23606E;
     --secondary-color: #023535;
     --font-oswald: 'Oswald', sans-serif;
+    font-size:1rem;
 }
 
 *{
@@ -19,10 +20,11 @@
 body{
     font-family: var(--font-oswald);
     background: var(--background-color);
+    
 }
 
 main{
-    width: 1200px;
+    width: 98%;
     margin:0 auto;
 }
 
@@ -32,15 +34,21 @@ main > section {
 
 main > section:first-child {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: space-around;
-    height: 350px;
+}
+
+main > section:first-child div:first-child{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h1{
     color: var(--secondary-color);
     font-family: var(--font-oswald);
-    font-size: 62px;
+    font-size: 4rem;
     margin-top: 0;
 }
 
@@ -48,36 +56,35 @@ button{
     border-radius: 3px;
     color: var(--white-color);
     border: 0;
-    padding: 15px;
-    margin-top: 40px;
+    padding: 1rem;
+    margin-top: 2.5rem;
     background-color: var(--primary-color);
     font-size: 1.2rem;
 }
 
 section h2 {
-    font-size: 42px;
+    font-size: 2rem;
     font-family: var(--font-oswald);
-    margin: 40px 0 10px;
+    margin: 2rem 0 0.625rem;
 }
 
 section p{
     font-size: 1.6rem;
     font-weight: 200;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .about-container a{
     font-size: 1.2rem;
     color: var(--primary-color);
-    padding:0 10px;
+    padding:0 0.625rem;
 }
 
 section.experience-container > div {
-    padding: 10px;
+    padding: 0.625rem;
     border-radius: 5px;
-    border:2px solid var(--black-color);;
-    display: inline-block;
-    margin:10px;
+    border:2px solid var(--black-color);
+    margin:0.625rem;
     color:var(--white-color);
     background-color: var(--primary-color);
 }
@@ -86,9 +93,12 @@ section.experience-container > div  p {
     font-size:1rem;
 }
 
+:is(.experience-container,.portfolio-container) :where(img){
+    width: -webkit-fill-available;
+}
+
 .portfolio-container > div{
-    display: inline-block;
-    margin:10px;
+    margin:0.625rem;
 }
 
 .social-media > a:first-child{
@@ -105,18 +115,18 @@ section.contact-container h2{
 }
 
 section.contact-container form{
-   width: 500px;
-   margin: 10px auto;
-   padding: 20px 0;
+   margin: 0.625rem auto;
+   padding: 1.25rem 0;
    border-radius: 10px;
-   color:var(--white-color)
+   color:var(--white-color);
+   width: 80%;
 }
 
 section.contact-container button{
     background-color: var(--background-color);
     color:#000;
     width: 100%;
-    margin-top:10px;
+    margin-top:0.625rem;
 }
 
 input:is([type=text],input[type=email] ) {
@@ -130,13 +140,60 @@ textarea{
 input:is([type=text],input[type=email]) ,textarea{
     border:1px solid var(--white-color);
     display: block;
-    margin-bottom:10px; 
-    width: 500px;
-    border-radius:2px;
-    padding:2px;
+    margin-bottom:0.625rem; 
+    border-radius:0.13rem;
+    padding:0.13rem;
+    width: 100%;
 } 
 
 footer {
     text-align: center;
     color:var(--secondary-color);
+}
+
+/* Desktop */
+@media screen and (min-width: 786px){
+    main{
+        width: 1200px;
+        margin:0 auto;
+    }
+    main > section:first-child {
+        display: flex;
+        flex-direction: row;
+        height: 350px;
+    }
+
+    main > section:first-child div:first-child{
+        display: block;
+    }
+    input:is([type=text],input[type=email]) ,textarea{
+        border:1px solid var(--white-color);
+        display: block;
+        margin-bottom:0.625rem; 
+        width: 500px;
+        border-radius:0.13rem;
+        padding:0.13rem;
+    }
+    section.contact-container form{
+        width: 500px;
+        margin: 0.625rem auto;
+        padding: 1.25rem 0;
+        border-radius: 10px;
+        color:var(--white-color)
+     }
+     
+     section.experience-container > div {
+        padding: 0.625rem;
+        border-radius: 5px;
+        border:2px solid var(--black-color);
+        display: inline-block;
+        margin:0.625rem;
+        color:var(--white-color);
+        background-color: var(--primary-color);
+    }
+
+.portfolio-container > div{
+    display: inline-block;
+    
+}
 }
