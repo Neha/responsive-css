@@ -119,8 +119,7 @@ section.contact-container button{
     margin-top:10px;
 }
 
-input[type=text],
-input[type=email]{
+input:is([type=text],input[type=email] ) {
     height: 40px;
 }
 
@@ -128,16 +127,14 @@ textarea{
     height: 100px;
 }
 
-input[type=text],
-input[type=email],
-textarea{
+input:is([type=text],input[type=email]) ,textarea{
     border:1px solid var(--white-color);
     display: block;
     margin-bottom:10px; 
     width: 500px;
     border-radius:2px;
     padding:2px;
-}
+} 
 
 footer {
     text-align: center;
